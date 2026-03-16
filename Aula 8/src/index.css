@@ -1,0 +1,95 @@
+:root {
+  --text: #10213d;
+  --text-h: #11224d;
+  --bg: #dbeafe;
+  --border: rgba(30, 58, 138, 0.2);
+  --code-bg: #fef3c7;
+  --accent: #2563eb;
+  --accent-bg: rgba(37, 99, 235, 0.12);
+  --accent-border: rgba(37, 99, 235, 0.38);
+  --social-bg: rgba(255, 255, 255, 0.5);
+  --shadow:
+    rgba(30, 58, 138, 0.18) 0 20px 30px -14px, rgba(15, 23, 42, 0.08) 0 10px 16px -10px;
+
+  --sans: "Trebuchet MS", "Verdana", sans-serif;
+  --heading: "Trebuchet MS", "Verdana", sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 222, 89, 0.9) 0, rgba(255, 222, 89, 0.32) 18%, transparent 38%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.28) 0, rgba(59, 130, 246, 0.12) 20%, transparent 42%),
+    linear-gradient(180deg, #dbeafe 0%, #eff6ff 48%, #fee2e2 100%);
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
